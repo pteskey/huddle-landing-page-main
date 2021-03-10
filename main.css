@@ -6,11 +6,11 @@
 }
 
 body {
+  position: relative;
   display: flex;
   justify-content: space-around;
   height: 100vh;
-  width: 100vw;
-  position: relative;
+  width: 100vw;  
   font-family: 'Open Sans', sans-serif;
   background-color: hsl(257, 40%, 49%);
   background-image: url(images/bg-desktop.svg);
@@ -31,14 +31,17 @@ h6 {
   font-weight: 600;
 }
 .wrapper {
-  display: flex;  
+  display: flex;
+  justify-content: space-around;  
   height: 100vh;
-  width: 90vw;  
+  width: 90vw;
+  flex-wrap: wrap;  
   
 }
 
 h1 {
-  font-size: 3rem;  
+  font-size: 2.5rem;
+  max-width: 20ch;  
   padding-bottom: 20px;
   letter-spacing: 0px;
 }
@@ -51,11 +54,11 @@ h1 {
 }
 
 .column2 {
+  align-self: flex-end;
   margin-left: 60px;
   display: flex;
   flex-direction: column;  
-  align-items: center;
-  justify-content: center;
+  justify-content: center;   
   text-align: left;
   max-width: 600px;
 }
@@ -75,6 +78,7 @@ h1 {
 
 .illustration {
   max-width: 800px;
+  width: 100%;
 }
 
 .calltoaction {
@@ -83,14 +87,14 @@ h1 {
 
 .cta {
   font-size: 1.2rem;
+  margin-bottom: 160px;
 }
 
-.icons {  
+.icons { 
   align-self: flex-end;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 200px;  
+  justify-self: flex-end;
+  display: flex; 
+  margin-bottom: 50px;
 }
 
 .icons i {
@@ -134,8 +138,6 @@ button:focus {
 footer {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .attribution {
@@ -144,4 +146,54 @@ footer {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.75rem;
+}
+
+.column1 {
+  
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.logo {
+  margin: 0;
+  padding-bottom: 40px;
+  width: 150px;
+}
+
+.column2 {
+  margin: auto;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+}
+
+.column2 p {
+  align-self: start;
+  font-size: 1.1rem;
+  max-width: 50ch;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.cta {  
+  margin-bottom: 70px;
+}
+
+.icons { 
+  align-self: center;
+  justify-self: flex-end;
+  display: flex; 
+  margin-bottom: 10px;
+}
+
+
 }
